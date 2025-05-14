@@ -63,7 +63,7 @@ public class PPtrAndCrcProcessor : IDisposable
             {
                 try
                 {
-                    reader = new UnityFileReader(Path.Join(m_Folder, filename), 4 * 1024 * 1024);
+                    reader = new UnityFileReader(Path.Combine(m_Folder, filename), 4 * 1024 * 1024);
                 }
                 catch (Exception)
                 {
