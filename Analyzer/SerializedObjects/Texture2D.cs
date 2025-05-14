@@ -1,5 +1,5 @@
 using UnityDataTools.FileSystem.TypeTreeReaders;
-using System.Text.Json;
+
 namespace UnityDataTools.Analyzer.SerializedObjects;
 
 public class Texture2D
