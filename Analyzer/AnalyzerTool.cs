@@ -46,7 +46,7 @@ public class AnalyzerTool
         {
             if (ShouldIgnoreFile(file))
             {
-                var relativePath = Path.GetRelativePath(path, file);
+                var relativePath = PathHelper.GetRelativePath(path, file);
 
                 if (m_Verbose)
                 {
@@ -115,7 +115,7 @@ public class AnalyzerTool
             {
                 // It wasn't an AssetBundle, try to open the file as a SerializedFile.
 
-                var relativePath = Path.GetRelativePath(rootDirectory, file);
+                var relativePath = PathHelper.GetRelativePath(rootDirectory, file);
                 writer.WriteSerializedFile(relativePath, file, Path.GetDirectoryName(file));
 
                 ReportProgress(relativePath, fileIndex, cntFiles);
@@ -125,7 +125,7 @@ public class AnalyzerTool
             {
                 try
                 {
-                    var assetBundleName = Path.GetRelativePath(rootDirectory, file);
+                    var assetBundleName = PathHelper.GetRelativePath(rootDirectory, file);
 
                     writer.BeginAssetBundle(assetBundleName, new FileInfo(file).Length);
                     ReportProgress(assetBundleName, fileIndex, cntFiles);
