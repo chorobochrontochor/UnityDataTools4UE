@@ -4,9 +4,9 @@ namespace UnityDataTools.Analyzer.SerializedObjects;
 
 public class AnimationClip
 {
-    public string Name { get; init; }
-    public bool Legacy { get; init; }
-    public int Events { get; init; }
+    public string Name { get; private set; }
+    public bool Legacy { get; private set; }
+    public int Events { get; private set; }
     
     private AnimationClip() {}
 

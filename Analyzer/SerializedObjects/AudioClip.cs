@@ -4,13 +4,13 @@ namespace UnityDataTools.Analyzer.SerializedObjects;
 
 public class AudioClip
 {
-    public string Name { get; init; }
-    public int StreamDataSize { get; init; }
-    public int BitsPerSample { get; init; }
-    public int Frequency { get; init; }
-    public int Channels { get; init; }
-    public int LoadType { get; init; }
-    public int Format { get; init; }
+    public string Name { get; private set; }
+    public int StreamDataSize { get; private set; }
+    public int BitsPerSample { get; private set; }
+    public int Frequency { get; private set; }
+    public int Channels { get; private set; }
+    public int LoadType { get; private set; }
+    public int Format { get; private set; }
 
     private AudioClip() {}
 

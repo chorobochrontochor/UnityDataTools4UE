@@ -4,13 +4,13 @@ namespace UnityDataTools.Analyzer.SerializedObjects;
 
 public class Texture2D
 {
-    public string Name { get; init; }
-    public int StreamDataSize { get; init; }
-    public int Width { get; init; }
-    public int Height { get; init; }
-    public int Format { get; init; }
-    public int MipCount { get; init; }
-    public bool RwEnabled { get; init; }
+    public string Name { get; private set; }
+    public int StreamDataSize { get; private set; }
+    public int Width { get; private set; }
+    public int Height { get; private set; }
+    public int Format { get; private set; }
+    public int MipCount { get; private set; }
+    public bool RwEnabled { get; private set; }
 
     private Texture2D() {}
     

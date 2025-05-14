@@ -4,8 +4,8 @@ namespace UnityDataTools.Analyzer.SerializedObjects;
 
 public class PPtr
 {
-    public int FileId { get; init; }
-    public long PathId { get; init; }
+    public int FileId { get; private set; }
+    public long PathId { get; private set; }
     
     private PPtr() {}
 

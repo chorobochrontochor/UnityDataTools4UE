@@ -5,32 +5,32 @@ namespace UnityDataTools.Analyzer.SerializedObjects;
 
 public class Shader
 {
-    public string Name { get; init; }
-    public int DecompressedSize { get; init; }
-    public IReadOnlyList<SubShader> SubShaders { get; init; }
-    public IReadOnlyList<string> Keywords { get; init; }
+    public string Name { get; private set; }
+    public int DecompressedSize { get; private set; }
+    public IReadOnlyList<SubShader> SubShaders { get; private set; }
+    public IReadOnlyList<string> Keywords { get; private set; }
 
     private Shader() {}
 
     public class SubShader
     {
-        public IReadOnlyList<Pass> Passes { get; init; }
+        public IReadOnlyList<Pass> Passes { get; private set; }
         
         public class Pass
         {
-            public string Name { get; init; }
+            public string Name { get; private set; }
 
             // The key is the program type (vertex, fragment...) 
-            public IReadOnlyDictionary<string, IReadOnlyList<SubProgram>> Programs { get; init;  }
+            public IReadOnlyDictionary<string, IReadOnlyList<SubProgram>> Programs { get; private set;  }
             
             public class SubProgram
             {
-                public int HwTier { get; init; }
-                public int Api { get; init; }
-                public uint BlobIndex { get; init; }
+                public int HwTier { get; private set; }
+                public int Api { get; private set; }
+                public uint BlobIndex { get; private set; }
                 
                 // Keyword index in ShaderData.Keywords 
-                public IReadOnlyList<int> Keywords { get; init; }
+                public IReadOnlyList<int> Keywords { get; private set; }
                 
                 private SubProgram() {}
 

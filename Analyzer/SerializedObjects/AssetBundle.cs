@@ -5,17 +5,17 @@ namespace UnityDataTools.Analyzer.SerializedObjects;
 
 public class AssetBundle
 {   
-    public string Name { get; init; }
-    public IReadOnlyList<Asset> Assets { get; init; }
-    public IReadOnlyList<PPtr> PreloadTable { get; init; }
-    public bool IsSceneAssetBundle { get; init; }
+    public string Name { get; private set; }
+    public IReadOnlyList<Asset> Assets { get; private set; }
+    public IReadOnlyList<PPtr> PreloadTable { get; private set; }
+    public bool IsSceneAssetBundle { get; private set; }
 
     public class Asset
     {
-        public string Name { get; init; }
-        public PPtr PPtr { get; init; }
-        public int PreloadIndex { get; init; }
-        public int PreloadSize { get; init; }
+        public string Name { get; private set; }
+        public PPtr PPtr { get; private set; }
+        public int PreloadIndex { get; private set; }
+        public int PreloadSize { get; private set; }
 
         private Asset() {}
 

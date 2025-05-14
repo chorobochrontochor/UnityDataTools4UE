@@ -5,7 +5,7 @@ namespace UnityDataTools.Analyzer.SerializedObjects;
 
 public class PreloadData
 {
-    public IReadOnlyList<PPtr> Assets { get; init; }
+    public IReadOnlyList<PPtr> Assets { get; private set; }
     
     private PreloadData() {}
 

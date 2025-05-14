@@ -7,12 +7,12 @@ namespace UnityDataTools.Analyzer.SQLite.Handlers;
 
 public class Context
 {
-    public int AssetBundleId { get; init; }
-    public int SerializedFileId { get; init; }
-    public int SceneId { get; init; }
-    public Util.ObjectIdProvider ObjectIdProvider { get; init; }
-    public Util.IdProvider<string> SerializedFileIdProvider { get; init; }
-    public Dictionary<int, int> LocalToDbFileId { get; init; }
+    public int AssetBundleId { get; set; }
+    public int SerializedFileId { get; set; }
+    public int SceneId { get; set; }
+    public Util.ObjectIdProvider ObjectIdProvider { get; set; }
+    public Util.IdProvider<string> SerializedFileIdProvider { get; set; }
+    public Dictionary<int, int> LocalToDbFileId { get; set; }
     public SqliteTransaction Transaction { get; set; }
 }
 

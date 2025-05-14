@@ -47,19 +47,19 @@ public class Mesh
         public int Dimension;
     }
 
-    public string Name { get; init; }
-    public int StreamDataSize { get; init; }
-    public int SubMeshes { get; init; }
-    public int BlendShapes { get; init; }
-    public int Bones { get; init; }
-    public int Indices { get; init; }
-    public int Vertices { get; init; }
-    public int Compression { get; init; }
-    public bool RwEnabled { get; init; }
+    public string Name { get; private set; }
+    public int StreamDataSize { get; private set; }
+    public int SubMeshes { get; private set; }
+    public int BlendShapes { get; private set; }
+    public int Bones { get; private set; }
+    public int Indices { get; private set; }
+    public int Vertices { get; private set; }
+    public int Compression { get; }
+    public bool RwEnabled { get; private set; }
     
-    public IReadOnlyList<Channel> Channels { get; init; }
+    public IReadOnlyList<Channel> Channels { get; private set; }
     
-    public int VertexSize { get; init; }
+    public int VertexSize { get; private set; }
     
     private static readonly int[] s_ChannelTypeSizes =
     {
